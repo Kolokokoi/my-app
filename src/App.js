@@ -44,7 +44,7 @@
     import RegistrationScreen from './components/RegistrationScreen';
 
   // --- CONFIGURATION ---
-  const LOGO_URL = "/logo.png"; 
+    const LOGO_URL = "/my-logo.png";
 // RoomDetailModal.js
 
 // RoomDetailModal.js - Focused on the action button block
