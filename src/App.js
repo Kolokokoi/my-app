@@ -985,7 +985,7 @@ function RoomDetailModal({ roomData, onClose }) {
           <div style={styles.modalOverlay}>
               <div style={styles.modalCard}>
                   <h3 style={styles.modalTitle}>WELCOME</h3>
-                  <p style={styles.modalText}>Allow 3D Classroom to access this device's location <strong>all-the-time</strong>?</p>
+                  <p style={styles.modalText}>Allow Campus Navigator to access this device's location <strong>all-the-time</strong>?</p>
                   <div style={styles.modalDivider}></div>
                   <button style={styles.modalButton} onClick={requestLocation} disabled={requesting}>
                       {requesting ? 'Requesting location...' : 'Allow all the time'}
@@ -1022,7 +1022,7 @@ function RoomDetailModal({ roomData, onClose }) {
               
               <h1 style={{ fontSize: "20px", fontWeight: "800", color: "#1e293b", marginBottom: "8px" }}>Virtual Campus Navigator</h1>
               <p style={{ fontSize: "12px", color: "#64748b", marginBottom: "32px", fontWeight: "500", lineHeight: '1.5' }}>
-                  A 3D Interactive Classroom and Room Availability Management System for the Hiraya Building, CCIS
+                  An Interactive Classroom and Room Availability Management System for the Hiraya Building, CCIS
               </p>
               
               <div style={{ textAlign: "left", backgroundColor: "white", padding: "24px", borderRadius: "20px", boxShadow: "0 2px 5px rgba(0,0,0,0.05)" }}>
