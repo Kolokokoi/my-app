@@ -1,5 +1,33 @@
 # Getting Started with Create React App
 
+## PostgreSQL setup
+
+This app now uses PostgreSQL through the local Express API in `server.js`. It expects the existing tables (`students`, `faculty`, `admins`, `rooms`, `courses`, and `class_schedules`) in your PostgreSQL database.
+
+Set `DATABASE_URL` before starting the app, for example:
+
+```powershell
+$env:DATABASE_URL = "postgresql://postgres:password@localhost:5432/campus_navigator"
+npm start
+```
+
+The API runs on port 5000 and the React app runs on port 3000. Never put `DATABASE_URL` in frontend code or commit it to git.
+
+## Deploy as a website
+
+For local development use `npm run dev`. For production, set `DATABASE_URL`, run `npm run build`, then run `npm start`. The Express server serves both the React build and the `/api` routes from one website URL.
+
+The local PostgreSQL database is not reachable by people on the internet. Before deployment, move the database to a hosted PostgreSQL provider and set its private connection string as the host's `DATABASE_URL`. Deploy this Node project to a host that supports persistent Node servers, such as Render, Railway, or a VPS. Do not expose the local `.env` file or PostgreSQL password.
+
+To migrate the existing Supabase schema and data into the configured local database, run PowerShell from the project folder:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\migrate-supabase.ps1
+```
+
+The script asks for the Supabase database connection string and password in the terminal, then imports it into `my_app_db`.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
